@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylo.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+    <title>Registro de Empleado</title>
+</head>
+<body class="">
+    <br/>
+<div class="container">
+  <div class="btn-group">
+  <a href="#" class="btn btn-primary active" aria-current="page" disabled>Active link</a> 
+<a href="{{ url_for('empleados') }}" class="btn btn-primary">Lista de Empleados</a>
+</div>
+<br/>
+    <div class=" transparente">
+    <h2>Registro de Empleado</h2>
+    <form method="POST" class="row g-3 needs-validation">
+  <div class="col-md-4">
+    <label for="Nombres" class="form-label">Nombre</label>
+    <input type="text" name="Nombres" class="form-control" required>
+       <div class="invalid-feedback">
+        Campo es obligatoria.
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="Apellidos" class="form-label">Apellidos</label>
+    <input type="text" name="Apellidos" class="form-control" required> 
+    <div class="invalid-feedback">
+        Campo es obligatoria.
+    </div>
+  </div>
+   <div class="col-md-4">
+    <label for="FechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+    <input type="date" name="FechaNacimiento" class="form-control" required> 
+    <div class="invalid-feedback">
+        Campo es obligatoria.
+    </div>
+  </div>
+<div class="col-md-4">
+    <label for="NumeroIdentificacion" class="form-label">Numero de Identificacion</label>
+    <input type="text" name="NumeroIdentificacion" class="form-control" required>
+    <div class="invalid-feedback">
+        Campo es obligatoria.
+    </div>
+</div>
+  <div class="col-md-4">
+    <label for="Direccion" class="form-label">Dirección</label>
+    <input type="text" name="Direccion" class="form-control" required>
+       <div class="invalid-feedback">
+        La dirección es obligatoria.
+       </div>
+  </div>
+  <div class="col-md-4">
+    <label for="Telefono" class="form-label">Telefono</label>
+    <input type="text" name="Telefono" class="form-control" required>
+    <div class="invalid-feedback">
+        Campo es obligatoria.
+    </div>
+  </div>
+   <div class="col-md-4">
+    <label for="Correo" class="form-label">Correo Electronico</label>
+    <input type="email" name="Correo" class="form-control" required>
+    <div class="invalid-feedback">
+        Campo es obligatoria.
+    </div>
+  </div>
+    <div class="col-md-4">
+    <label for="FechaIngreso" class="form-label">Fecha de Ingreso</label>
+    <input type="date" name="FechaIngreso" class="form-control" required>
+    <div class="invalid-feedback">
+        Campo es obligatoria.
+    </div>
+</div>
+  <div class="col-md-3">
+    <label for="CargoPuesto" class="form-label">Cargo del Puesto</label>
+    <select class="form-select" name="CargoPuesto" id="CargoPuesto" required>
+      <option selected value="">Select</option>
+      <option>Soprte Técnico de Campo</option>
+      <option>Ingeniero en Soporte Técnico</option>
+      <option>Ingeniero en Sistemas</option>
+      <option>Ingeniero en Electrónica</option>
+      <option>Desarrollador Backend y Frontend</option>
+    </select>
+    <div class="invalid-feedback">
+        Campo es obligatoria.
+    </div>
+  </div>
+<div class="col-md-4">
+    <label for="Departamento" class="form-label">Departamento</label>
+    <select class="form-select" name="Departamento" id="Departamento" required>
+      <option selected value="">Select</option>
+      <option>Centro de Cómputo</option>
+      <option>Desarrollado de Sofware</option>
+    </select>
+    <div class="invalid-feedback">
+        Campo es obligatoria.
+    </div>
+  </div>
+    <div class="col-md-4">
+    <label for="Salario" class="form-label">Salario</label>
+    <input type="text" name="Salario" class="form-control" required>
+    <div class="invalid-feedback">
+        Campo es obligatoria.
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="TipoContrato" class="form-label">Tipo de Contrato</label>
+    <select class="form-select" name="TipoContrato" id="TipoContrato" required>
+      <option selected value="">Select</option>
+      <option>Contrato por tiempo determinado</option>
+      <option>Contrato por tiempo indefinido</option>
+      <option>Contrato de capacitación inicial</option>
+    </select>
+    <div class="invalid-feedback">
+        Campo es obligatoria.
+    </div>
+  </div>
+   <div class="col-md-3" style="display: none;">
+        <select id="Estatus" class="form-select" name="Estatus">
+            <option selected value="true">Activo</option>
+        </select>
+    </div>
+  </div>
+  <br/>
+  <div class="col-12">
+    <button class="btn btn-outline-primary" type="submit">Submit form</button>
+  </div>
+  <br/>
+</form>
+   </div>
+  </div>
+ <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>

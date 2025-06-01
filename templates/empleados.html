@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Lista de Empleados</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2>Lista de Empleados</h2>
+      <div class="btn-group">
+        <a href="#" class="btn btn-primary active" aria-current="page" disabled>Directory</a>
+       <a href="{{ url_for('registro') }}" class="btn btn-primary">Registro Empleado</a>
+
+      </div>
+ <div class="container mt-4">
+    <h2 class="text-center">Lista de Empleados</h2>
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Correo</th>
+                <th>Estatus</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="tablaEmpleados"></tbody>
+    </table>
+    
+</div>
+    </div>
+    <script src="{{ url_for('static', filename='empleado.js') }}"></script>
+    <script src="{{ url_for('static', filename='delete.js') }}"></script>
+    <script src="{{ url_for('static', filename='update.js') }}"></script>
+  </body>
+</html>
